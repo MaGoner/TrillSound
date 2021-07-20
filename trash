@@ -1,0 +1,18 @@
+
+// SERVER TRASH
+  // FROM BIOS, DESTRUCTURING
+    const youtubeUsername = youtubeLink ? destructureSocialLink(youtubeLink) : null
+    const facebookUsername = facebookLink ? destructureSocialLink(facebookLink) : null
+    const instagramUsername = instagramLink ? destructureSocialLink(instagramLink) : null
+    const kingschatUsername = kingschatLink ? destructureSocialLink(kingschatLink) : null
+    const twitterUsername = twitterLink ? destructureSocialLink(twitterLink) : null
+  
+    const destructureSocialLink = (link) => {
+      const linkInArray = link.split('/');
+  
+      if (linkInArray[linkInArray.length - 1] === '/') {
+        return linkInArray[linkInArray.length - 2];
+      }
+
+      return linkInArray[linkInArray.length - 1]
+    }

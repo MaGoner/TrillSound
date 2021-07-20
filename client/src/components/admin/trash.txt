@@ -1,0 +1,21 @@
+// deleting accounts
+<li>
+  <i className='fas fa-trash' style={{ color: 'tomato' }}></i>
+  {/* eslint-disable-next-line */}
+  <a style={{ color: 'tomato' }} onClick={openAlertModal}>
+    Delete Account
+  </a>
+  <div className='alert-modal-container'>
+    <div className='alert-modal'>
+      <p className='msg'>
+        Are you sure you want to{' '}
+        <span style={{ backgroundColor: 'tomato' }}>Delete this Account?</span>
+      </p>
+      <div className='options'>
+        {/* eslint-disable-next-line */}
+        <a onClick={closeAlertModal}>No</a>
+        <a href='/s'>Yes</a>
+      </div>
+    </div>
+  </div>
+</li>;
