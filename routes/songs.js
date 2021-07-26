@@ -216,8 +216,13 @@ router.delete('/delete/:id', auth, async (req, res) => {
 });
 
 const destructureLinkForId = (link) => {
-  const queries = link.split('wp-content/uploads');
-  return queries[1];
+  if (link.indexOf('export') !== -1) {
+    const queries = link.split('=');
+    return queries[queries.length - 1]; // last element
+  }
+
+  const params = link.split('/');
+  return params[params.indexOf('d') + 1];
 };
 
 const updateArtistBio = async (artistId, songId) => {

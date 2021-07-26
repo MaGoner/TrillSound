@@ -90,8 +90,9 @@ export const GlobalProvider = ({ children }) => {
           const songIndexes = [];
           data.songs.forEach((song, index) => {
             // generate image view link
-            song.thumbnail = `https://webdeverguide.com/wp-content/uploads${song.thumbnail}`;
-            song.downloadLink = `https://webdeverguide.com/wp-content/uploads${song.downloadLink}`;
+            song.thumbnail = `https://drive.google.com/uc?export=view&id=${song.thumbnail}`;
+            // generate song download link
+            song.downloadLink = `https://drive.google.com/uc?export=download&id=${song.downloadLink}`;
 
             song.artist = `${song.artist
               .substr(0, 1)

@@ -115,7 +115,7 @@ export const MainBody = () => {
     return (
       <li key={id} className='song-container'>
         <div className='post-thumbnail'>
-          <img src={thumbnail} alt='ada img' className='img'></img>
+          <img src={thumbnail} alt={`${title} img`} className='img'></img>
         </div>
         <div className='song-title'>
           <h3>
@@ -146,7 +146,7 @@ export const MainBody = () => {
             ></i>
           </div>
           <div className='download-song' onClick={() => updateDownloads(id)}>
-            <a href={downloadLink} target='_blank' rel='noopener noreferrer'>
+            <a href={downloadLink}>
               <i className='fas fa-download'></i>
             </a>
           </div>

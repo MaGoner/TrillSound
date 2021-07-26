@@ -123,13 +123,12 @@ export const PraiseTrending = () => {
   };
 
   const songElements = newSongIndex.map((songIndex, index) => {
-    const { title, artist, id, thumbnail, downloadLink } = praiseSongs[
-      songIndex
-    ];
+    const { title, artist, id, thumbnail, downloadLink } =
+      praiseSongs[songIndex];
     return (
       <li key={id} className='song-container'>
         <div className='post-thumbnail'>
-          <img src={thumbnail} alt='ada img' className='img'></img>
+          <img src={thumbnail} alt={`${title} img`} className='img'></img>
         </div>
         <div className='song-title'>
           <h3>

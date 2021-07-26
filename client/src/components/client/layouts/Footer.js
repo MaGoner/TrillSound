@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export const Footer = () => {
-  const [emailValue, setEmailValue] = useState('');
+  // const [emailValue, setEmailValue] = useState('');
 
   // open email modal
   const openEmailModal = () => {
